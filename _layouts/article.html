@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{% assign article_group = site.data.article_groups | where: 'slug', page.category | first %}
 <article class="article-page">
   {% if page.cover %}
   <figure class="article-cover">
@@ -10,8 +9,8 @@ layout: default
   {% endif %}
   <div class="article-reader">
     <div class="article-toolbar">
-      <a class="article-back" href="{{ '/' | relative_url }}#articles"><span aria-hidden="true">←</span> 返回文章目录</a>
-      {% if article_group %}<span class="article-category">{{ article_group.title }}</span>{% endif %}
+      <a class="article-back" href="{{ '/' | relative_url }}#articles"><span aria-hidden="true">←</span> 返回文章展览</a>
+      <span class="article-category">无来 · 修学随笔</span>
     </div>
     <header class="article-heading">
       <h1>{{ page.title | escape }}</h1>
@@ -22,7 +21,7 @@ layout: default
     <footer class="article-end">
       <span class="article-end-mark" aria-hidden="true">☸</span>
       <p>愿把所思所学，带回眼前的生活。</p>
-      <a href="{{ '/' | relative_url }}#articles">继续阅读 <span aria-hidden="true">↗</span></a>
+      <a href="{{ '/' | relative_url }}#articles">回到文章展览 <span aria-hidden="true">↗</span></a>
     </footer>
   </div>
 </article>

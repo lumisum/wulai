@@ -26,11 +26,12 @@
 
 ---
 
-## 文章目录
+## 文章时间线
 
-| 分组 | 文章 |
+按写作时间由近及远，愿你从一篇文章开始。
+
+| 日期 | 文章 |
 | --- | --- |
-| [修行与日常](articles/practice/README.md) | 暂无文章 |
-| [经义与学习](articles/study/README.md) | 暂无文章 |
-| [观心与体会](articles/insights/README.md) | [马斯克的佛性是什么？](https://lumisum.github.io/wulai/articles/insights/2026-09-24-musk-de-yuanli/)<br>[如来何以成佛祖？](https://lumisum.github.io/wulai/articles/insights/2026-09-24-rulai-heyi-cheng-fozu/) |
-| [佛法与生活](articles/life/README.md) | [有了佛学基础，情商会不会提高？](https://lumisum.github.io/wulai/articles/life/2026-09-24-fuxue-yu-qingshang/) |
+| 2026.09.24 | [马斯克的佛性是什么？](https://lumisum.github.io/wulai/articles/insights/2026-09-24-musk-de-yuanli/) |
+| 2026.09.24 | [如来何以成佛祖？](https://lumisum.github.io/wulai/articles/insights/2026-09-24-rulai-heyi-cheng-fozu/) |
+| 2026.09.24 | [有了佛学基础，情商会不会提高？](https://lumisum.github.io/wulai/articles/life/2026-09-24-fuxue-yu-qingshang/) |

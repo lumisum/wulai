@@ -32,33 +32,26 @@ description: 无来是个人修行与学习佛法的记录，在日常生活中�
   <div class="section-shell">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">文章目录</p>
-        <h2>从一篇文章开始</h2>
+        <p class="eyebrow">阅读 · 时间线</p>
+        <h2>从一篇，走近佛法。</h2>
       </div>
-      <p>关于修行、学习、观心与生活的记录。</p>
+      <p>从最近的记录开始，沿着一篇篇文字，慢慢走近佛法与日常。</p>
     </div>
 
     {% assign all_articles = site.pages | where: 'layout', 'article' | where: 'status', 'published' | sort: 'date' | reverse %}
-    <div class="category-grid">
-      {% for group in site.data.article_groups %}
-        {% assign group_articles = all_articles | where: 'category', group.slug %}
-        <section class="category-card">
-          <div class="category-topline"><span class="category-mark" aria-hidden="true">☸</span><span>{{ forloop.index | prepend: '0' }}</span></div>
-          <h3>{{ group.title }}</h3>
-          <p class="category-description">{{ group.description }}</p>
-          {% if group_articles.size > 0 %}
-            <ul class="article-list">
-              {% for article in group_articles %}
-                <li>
-                  <a href="{{ article.url | relative_url }}">{{ article.title | escape }}<span aria-hidden="true">↗</span></a>
-                  {% if article.date %}<time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: '%Y.%m.%d' }}</time>{% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-          {% else %}
-            <p class="empty-note">文章整理中 <span aria-hidden="true">·</span> 敬请期待</p>
-          {% endif %}
-        </section>
+    <div class="article-grid">
+      {% for article in all_articles %}
+        <a class="article-card" href="{{ article.url | relative_url }}" aria-label="阅读：{{ article.title | escape }}">
+          <figure class="article-card-visual">
+            <img src="{{ article.cover | relative_url }}" alt="{{ article.cover_alt | default: article.title | escape }}" loading="lazy">
+            <span class="article-card-shade" aria-hidden="true"></span>
+            <figcaption class="article-card-copy">
+              {% if article.date %}<time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: '%Y.%m.%d' }}</time>{% endif %}
+              <h3>{{ article.title | escape }}</h3>
+              <span class="article-card-read">阅读全文 <span aria-hidden="true">↗</span></span>
+            </figcaption>
+          </figure>
+        </a>
       {% endfor %}
     </div>
   </div>
