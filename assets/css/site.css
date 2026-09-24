@@ -109,6 +109,8 @@ img { max-width: 100%; height: auto; }
 
 .article-page { min-height: 70vh; padding: clamp(3rem, 7vw, 6rem) 1.5rem 5rem; background: var(--paper-light); }
 .article-heading, .article-content, .article-end { width: min(760px, 100%); margin-left: auto; margin-right: auto; }
+.article-cover { width: min(1120px, 100%); margin: 2.5rem auto 0; overflow: hidden; border-radius: 2px; }
+.article-cover img { display: block; width: 100%; height: auto; }
 .article-back { color: #7f887f; font-size: .8rem; letter-spacing: .06em; }
 .article-heading { padding: 2rem 0 3rem; border-bottom: 1px solid #e5e1d6; }
 .article-heading .eyebrow { margin-top: 2.5rem; color: #8c724c; }

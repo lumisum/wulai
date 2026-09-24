@@ -33,4 +33,4 @@
 | [修行与日常](articles/practice/README.md) | 暂无文章 |
 | [经义与学习](articles/study/README.md) | 暂无文章 |
 | [观心与体会](articles/insights/README.md) | 暂无文章 |
-| [佛法与生活](articles/life/README.md) | 暂无文章 |
+| [佛法与生活](articles/life/README.md) | [有了佛学基础，情商会不会提高？](https://lumisum.github.io/wulai/articles/life/2026-09-24-fuxue-yu-qingshang/) |

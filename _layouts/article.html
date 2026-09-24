@@ -10,6 +10,11 @@ layout: default
     {% if page.summary %}<p class="article-summary">{{ page.summary | escape }}</p>{% endif %}
     {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y年%m月%d日' }}</time>{% endif %}
   </header>
+  {% if page.cover %}
+  <figure class="article-cover">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}">
+  </figure>
+  {% endif %}
   <div class="article-content">{{ content }}</div>
   <footer class="article-end">
     <span aria-hidden="true">☸</span>
