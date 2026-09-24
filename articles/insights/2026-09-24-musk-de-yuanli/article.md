@@ -2,7 +2,7 @@
 layout: article
 title: "马斯克的佛性是什么？"
 category: insights
-date: 2026-09-24
+date: "2026-09-24T22:29:59+08:00"
 summary: "我不是判断马斯克是否信佛，而是借“愿力”思考一个问题：是什么让不同的行动长期朝向值得投入的方向，并在时间里形成合力？"
 status: published
 permalink: /articles/insights/2026-09-24-musk-de-yuanli/

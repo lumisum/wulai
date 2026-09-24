@@ -2,7 +2,7 @@
 layout: article
 title: "如来何以成佛祖？"
 category: insights
-date: 2026-09-24
+date: "2026-09-24T22:11:16+08:00"
 summary: "佛陀如何把混杂的生命经验拆开、命名、连成一套认识路径？从智能体的分类，到无住与名相，我试着理解：定义世界，也可以是一种修行。"
 status: published
 permalink: /articles/insights/2026-09-24-rulai-heyi-cheng-fozu/

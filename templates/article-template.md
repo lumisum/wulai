@@ -2,7 +2,7 @@
 layout: article
 title: "文章标题"
 category: practice # practice / study / insights / life
-date: 2026-09-24
+date: "YYYY-MM-DDTHH:MM:SS+08:00" # 使用发布时间，精确到秒以稳定排列时间线
 summary: "公众号摘要"
 status: draft
 ---

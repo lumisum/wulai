@@ -2,7 +2,7 @@
 layout: article
 title: "有了佛学基础，情商会不会提高？"
 category: life
-date: 2026-09-24
+date: "2026-09-24T21:50:15+08:00"
 summary: "佛学未必直接教人说话的技巧，却可能慢慢改变情绪生起时的心。无住、慈悲与对我执的觉察，会不会让我们在人际关系里多一点安定与理解？"
 status: published
 permalink: /articles/life/2026-09-24-fuxue-yu-qingshang/
