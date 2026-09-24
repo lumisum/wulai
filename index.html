@@ -1,0 +1,70 @@
+---
+layout: default
+title: 在日常里修行，在体会中写下佛法
+description: 无来是个人修行与学习佛法的记录，在日常生活中观照、体会与实践。
+---
+<header id="top" class="hero" style="background-image: linear-gradient(90deg, rgba(10, 28, 23, .82) 0%, rgba(13, 34, 28, .62) 38%, rgba(13, 34, 28, .10) 74%), url('{{ '/assets/wulai-readme-hero.png' | relative_url }}')">
+  <div class="hero-inner">
+    <p class="hero-kicker"><span></span> 一处佛法修学记录</p>
+    <h1>无来</h1>
+    <p class="hero-subtitle">在日常里修行，<br>在体会中写下佛法。</p>
+    <a class="hero-link" href="#articles">走进文章 <span aria-hidden="true">↓</span></a>
+  </div>
+  <p class="hero-caption">观心 · 修习 · 日用</p>
+</header>
+
+<section id="about" class="about-section section-shell">
+  <div class="about-copy">
+    <p class="eyebrow">关于无来</p>
+    <h2>让所学，回到生活里。</h2>
+    <p>这里记录我修行、学习佛法的过程，也记录佛法如何回到真实的日常。</p>
+    <p>我相信，修学不只是寻找现成的答案，也是在每一次观照、选择与实践中，慢慢看清自己的心。文章从个人经历与理解出发，尽量以真诚、平实的文字分享体会；所写是持续学习中的阶段记录，愿与有缘人一起思考、一起前行。</p>
+  </div>
+  <aside class="wechat-card">
+    <p class="eyebrow">公众号</p>
+    <img src="{{ '/assets/wechat-qr.jpg' | relative_url }}" alt="微信公众号「无来」二维码" width="160" height="160">
+    <h3>无来</h3>
+    <p>扫码关注微信公众号</p>
+  </aside>
+</section>
+
+<section id="articles" class="articles-section">
+  <div class="section-shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">文章目录</p>
+        <h2>从一篇文章开始</h2>
+      </div>
+      <p>关于修行、学习、观心与生活的记录。</p>
+    </div>
+
+    {% assign all_articles = site.pages | where: 'layout', 'article' | where: 'status', 'published' | sort: 'date' | reverse %}
+    <div class="category-grid">
+      {% for group in site.data.article_groups %}
+        {% assign group_articles = all_articles | where: 'category', group.slug %}
+        <section class="category-card">
+          <div class="category-topline"><span class="category-mark" aria-hidden="true">☸</span><span>{{ forloop.index | prepend: '0' }}</span></div>
+          <h3>{{ group.title }}</h3>
+          <p class="category-description">{{ group.description }}</p>
+          {% if group_articles.size > 0 %}
+            <ul class="article-list">
+              {% for article in group_articles %}
+                <li>
+                  <a href="{{ article.url | relative_url }}">{{ article.title | escape }}<span aria-hidden="true">↗</span></a>
+                  {% if article.date %}<time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: '%Y.%m.%d' }}</time>{% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p class="empty-note">文章整理中 <span aria-hidden="true">·</span> 敬请期待</p>
+          {% endif %}
+        </section>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="closing-note">
+  <span aria-hidden="true">☸</span>
+  <p>不急着给答案，先安静下来，看看此刻的心，也看看正在经历的生活。</p>
+</section>

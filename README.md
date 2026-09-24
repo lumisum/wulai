@@ -6,6 +6,8 @@
 
 <p align="center">在日常里修行，在体会中写下佛法</p>
 
+<p align="center"><a href="https://lumisum.github.io/wulai/">进入「无来」阅读网站 ↗</a></p>
+
 ---
 
 ## 关于无来

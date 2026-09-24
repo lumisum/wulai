@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% assign article_group = site.data.article_groups | where: 'slug', page.category | first %}
+<article class="article-page">
+  <header class="article-heading">
+    <a class="article-back" href="{{ '/' | relative_url }}#articles">← 返回文章目录</a>
+    {% if article_group %}<p class="eyebrow">{{ article_group.title }}</p>{% endif %}
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.summary %}<p class="article-summary">{{ page.summary | escape }}</p>{% endif %}
+    {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y年%m月%d日' }}</time>{% endif %}
+  </header>
+  <div class="article-content">{{ content }}</div>
+  <footer class="article-end">
+    <span aria-hidden="true">☸</span>
+    <p>愿把所思所学，带回眼前的生活。</p>
+    <a href="{{ '/' | relative_url }}#articles">继续阅读</a>
+  </footer>
+</article>

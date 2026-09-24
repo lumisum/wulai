@@ -1,0 +1,12 @@
+title: 无来
+description: 在日常里修行，在体会中写下佛法。
+lang: zh-CN
+url: https://lumisum.github.io
+baseurl: /wulai
+markdown: kramdown
+permalink: pretty
+exclude:
+  - .agents
+  - guides
+  - templates
+  - README.md

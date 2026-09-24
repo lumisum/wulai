@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <meta name="theme-color" content="#18372f">
+    <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="无来首页">
+        <span class="brand-mark" aria-hidden="true">☸</span>
+        <span>无来</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="{{ '/' | relative_url }}#articles">文章目录</a>
+        <a href="{{ '/' | relative_url }}#about">关于无来</a>
+      </nav>
+    </header>
+
+    <main id="main">{{ content }}</main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="{{ '/' | relative_url }}">无来</a>
+      <p>愿在每一次观照中，更清明地回到生活。</p>
+      <a class="back-top" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">回到顶部 ↑</a>
+    </footer>
+  </body>
+</html>

@@ -1,13 +1,11 @@
-# 文章标题
-
-> 状态：构思中 / 写作中 / 待发布 / 已发布  
-> 创建日期：YYYY-MM-DD  
-> 发布日期：  
-> 所属分组：修行与日常 / 经义与学习 / 观心与体会 / 佛法与生活
-
-## 公众号摘要
-
-用一两句话介绍文章的核心问题或体会。
+---
+layout: article
+title: "文章标题"
+category: practice # practice / study / insights / life
+date: 2026-09-24
+summary: "公众号摘要"
+status: draft
+---
 
 ## 正文
 
