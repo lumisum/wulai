@@ -4,4 +4,4 @@
 
 ## 文章
 
-暂无文章。新文章完成后，在此按日期倒序添加链接，并同步更新项目根目录的 [文章目录](../../README.md#观心与体会)。
+- [如来何以成佛祖？](https://lumisum.github.io/wulai/articles/insights/2026-09-24-rulai-heyi-cheng-fozu/) — 从“定义世界”的角度，谈佛法如何把纷乱经验化为可理解的结构，也提醒自己不执著于名相。
