@@ -26,6 +26,20 @@
 
 ---
 
+## 经典佛经
+
+从原文开始，也可以逐品对照无来的白话学习笔记。
+
+<p align="center">
+  <a href="https://lumisum.github.io/wulai/classics/diamond-sutra/">
+    <img src="assets/scriptures/diamond-sutra-banner.png" alt="青松绿山水间，晨光映在静水之上" width="100%" />
+  </a>
+</p>
+
+<p align="center"><a href="https://lumisum.github.io/wulai/classics/diamond-sutra/"><strong>阅读《金刚般若波罗蜜经》 ↗</strong></a></p>
+
+---
+
 ## 文章时间线
 
 按写作时间由近及远，愿你从一篇文章开始。
