@@ -11,7 +11,7 @@ permalink: /classics/diamond-sutra/
     <div class="scripture-hero-copy">
       <p class="scripture-kicker">经典 · 般若 · 无住</p>
       <h1>金刚般若波罗蜜经</h1>
-      <p>不住于相，而生其心。</p>
+      <p><strong>应无所住而生其心</strong></p>
     </div>
     <a class="scripture-hero-back" href="{{ '/classics/' | relative_url }}">‹ 经典目录</a>
   </header>
@@ -22,7 +22,7 @@ permalink: /classics/diamond-sutra/
       <h2 id="scripture-intro-title">不抓住答案，仍然认真生活。</h2>
     </div>
     <div class="scripture-intro-copy">
-      <p>《金刚经》反复追问：怎样发心、行善、帮助众生，同时不被“我做了什么”“我得到了什么”牢牢困住。它所说的“空”不是一切都不存在，“无住”也不是冷漠或放弃，而是在看清变化与因缘之后，依然清醒地行动。</p>
+      <p>《金刚经》反复追问：怎样发心、行善、帮助众生，同时不被“我做了什么”“我得到了什么”牢牢困住。它的核心句是<strong>“应无所住而生其心”</strong>。这里所说的“空”不是一切都不存在，“无住”也不是冷漠或放弃，而是在看清变化与因缘之后，依然清醒地行动。</p>
       <p>以下原文依照你提供的《金刚经》文稿整理，保留原稿章节、措辞与标点。白话部分是无来的个人学习笔记，帮助初读时抓住段落脉络，不是权威注疏；不同流传版本可能存在文字差异。需要核对另一种电子底本时，可参阅 <a href="https://dlbs.liberal.ntu.edu.tw/BDLM/sutra/html/T08/T08n0235.htm" target="_blank" rel="noopener noreferrer">CBETA《金刚般若波罗蜜经》（T08 No. 235）</a>。</p>
     </div>
   </section>
