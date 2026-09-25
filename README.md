@@ -26,17 +26,22 @@
 
 ---
 
-## 经典佛经
+## 经典阅读
 
-从原文开始，也可以逐品对照无来的白话学习笔记。
+佛典与心学原文，附无来的白话学习笔记。可只读原文，也可逐段对照。
 
-<p align="center">
-  <a href="https://lumisum.github.io/wulai/classics/diamond-sutra/">
-    <img src="assets/scriptures/diamond-sutra-banner.png" alt="青松绿山水间，晨光映在静水之上" width="100%" />
-  </a>
-</p>
+<table>
+  <tr>
+    <td width="50%" align="center"><a href="https://lumisum.github.io/wulai/classics/diamond-sutra/"><img src="assets/scriptures/diamond-sutra-banner.png" alt="阅读《金刚般若波罗蜜经》" width="100%" /><strong>金刚般若波罗蜜经</strong></a></td>
+    <td width="50%" align="center"><a href="https://lumisum.github.io/wulai/classics/heart-sutra/"><img src="assets/scriptures/heart-sutra-banner.png" alt="阅读《般若波罗蜜多心经》" width="100%" /><strong>般若波罗蜜多心经</strong></a></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="https://lumisum.github.io/wulai/classics/platform-sutra/"><img src="assets/scriptures/platform-sutra-banner.png" alt="阅读《六祖坛经》" width="100%" /><strong>六祖坛经</strong></a></td>
+    <td width="50%" align="center"><a href="https://lumisum.github.io/wulai/classics/chuanxilu/"><img src="assets/scriptures/chuanxilu-banner.png" alt="阅读王守仁《传习录》" width="100%" /><strong>传习录</strong></a></td>
+  </tr>
+</table>
 
-<p align="center"><a href="https://lumisum.github.io/wulai/classics/diamond-sutra/"><strong>阅读《金刚般若波罗蜜经》 ↗</strong></a></p>
+[进入经典阅读目录 ↗](https://lumisum.github.io/wulai/classics/)
 
 ---
 

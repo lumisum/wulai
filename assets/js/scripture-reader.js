@@ -7,7 +7,9 @@
   const sourceUrl = JSON.parse(document.querySelector("#scripture-source-url").textContent);
   const notes = JSON.parse(document.querySelector("#scripture-notes-data").textContent);
   const noteById = new Map((notes || []).map((item) => [item.id, item.note]));
-  const headingPattern = /金刚经[ \t\u00a0]*第([一二三四五六七八九十百]+品)[ \t]*([^\r\n]+)\r?\n/g;
+  const structuredHeadingPattern = /^##[ \t]+([^\r\n]+)\r?$/gm;
+  const diamondHeadingPattern = /金刚经[ \t\u00a0]*第([一二三四五六七八九十百]+品)[ \t]*([^\r\n]+)\r?\n/g;
+  const readerConfig = JSON.parse(document.querySelector("#scripture-reader-config")?.textContent || "{}");
 
   const appendText = (parent, tag, className, value) => {
     const element = document.createElement(tag);
@@ -18,14 +20,18 @@
   };
 
   function parseChapters(text) {
-    const matches = [...text.matchAll(headingPattern)];
+    const structuredMatches = [...text.matchAll(structuredHeadingPattern)];
+    const matches = structuredMatches.length ? structuredMatches : [...text.matchAll(diamondHeadingPattern)];
+    const structured = structuredMatches.length > 0;
     return matches.map((match, index) => {
       const bodyStart = match.index + match[0].length;
       const bodyEnd = index + 1 < matches.length ? matches[index + 1].index : text.length;
+      const heading = structured ? match[1].trim() : null;
+      const separator = heading?.indexOf("·") ?? -1;
       return {
-        id: `第${match[1]}`,
-        number: `第${match[1]}`,
-        title: match[2].trim(),
+        id: structured ? heading : `第${match[1]}`,
+        number: structured ? (separator >= 0 ? heading.slice(0, separator).trim() : "") : `第${match[1]}`,
+        title: structured ? (separator >= 0 ? heading.slice(separator + 1).trim() : heading) : match[2].trim(),
         body: text.slice(bodyStart, bodyEnd).trim(),
       };
     });
@@ -40,7 +46,7 @@
     const heading = document.createElement("h2");
     heading.className = "sutra-chapter-heading";
     heading.id = `heading-${index + 1}`;
-    appendText(heading, "span", "sutra-chapter-number", chapter.number);
+    if (chapter.number) appendText(heading, "span", "sutra-chapter-number", chapter.number);
     appendText(heading, "span", "sutra-chapter-title", chapter.title);
     section.append(heading);
 
@@ -177,7 +183,7 @@
       renderIndex(chapters);
 
       const count = document.querySelector("#scripture-chapter-count");
-      if (count) count.textContent = `共 ${chapters.length} 品`;
+      if (count) count.textContent = `共 ${chapters.length} ${readerConfig.sectionUnit || "品"}`;
       const progress = document.querySelector("#scripture-progress-bar");
       if (progress) {
         const updateProgress = () => {

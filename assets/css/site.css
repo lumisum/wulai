@@ -202,6 +202,7 @@ img { max-width: 100%; height: auto; }
 
 /* Scripture reading */
 .classics-spotlight { padding: clamp(2rem, 4vw, 3.5rem) 0; background: var(--paper-light); border-bottom: 1px solid #e9e5da; }
+.scripture-showcase-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }
 .scripture-showcase {
   position: relative;
   isolation: isolate;
@@ -226,6 +227,9 @@ img { max-width: 100%; height: auto; }
 .scripture-showcase-link { display: inline-flex; align-items: center; gap: 1.1rem; width: fit-content; margin-top: .55rem; padding-bottom: .25rem; border-bottom: 1px solid rgba(182, 149, 98, .75); color: #f1e5ce; font-size: .78rem; letter-spacing: .12em; }
 .scripture-showcase-link span { color: #d0ad74; transition: transform .25s ease; }
 .scripture-showcase:hover .scripture-showcase-link span { transform: translate(3px, -2px); }
+.scripture-showcase-grid .scripture-showcase { min-height: 0; aspect-ratio: 2.35 / 1; }
+.scripture-showcase-grid .scripture-showcase-copy { left: clamp(1.2rem, 4vw, 2rem); width: 78%; }
+.scripture-showcase-grid .scripture-showcase-copy strong { font-size: clamp(1.15rem, 2vw, 1.8rem); }
 .classics-index { padding-top: clamp(4rem, 8vw, 7rem); padding-bottom: clamp(5rem, 9vw, 8rem); }
 .classics-index > .eyebrow { color: #8c724c; }
 .classics-index h1 { margin: 0; color: var(--pine); font: 650 clamp(2rem, 4.5vw, 3.5rem)/1.4 var(--sans); letter-spacing: .07em; }
@@ -311,6 +315,10 @@ img { max-width: 100%; height: auto; }
   .scripture-showcase { min-height: 260px; aspect-ratio: 1.9 / 1; }
   .scripture-showcase-copy { left: 1.35rem; width: 82%; }
   .scripture-showcase-copy strong { font-size: clamp(1.45rem, 6vw, 2rem); }
+  .scripture-showcase-grid { grid-template-columns: 1fr; }
+  .scripture-showcase-grid .scripture-showcase { min-height: 250px; aspect-ratio: 1.9 / 1; }
+  .scripture-showcase-grid .scripture-showcase-copy { left: 1.35rem; width: 82%; }
+  .scripture-showcase-grid .scripture-showcase-copy strong { font-size: clamp(1.45rem, 6vw, 2rem); }
   .scripture-hero { min-height: 390px; }
   .scripture-hero > img { object-position: 59% center; }
   .scripture-hero-copy { width: calc(100% - 2.5rem); padding-top: 4rem; }
@@ -334,6 +342,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 480px) {
   .scripture-showcase { min-height: 250px; aspect-ratio: 1.45 / 1; }
+  .scripture-showcase-grid .scripture-showcase { min-height: 230px; aspect-ratio: 1.55 / 1; }
   .scripture-showcase-shade { background: linear-gradient(90deg, rgba(12, 31, 25, .94), rgba(12, 31, 25, .7) 64%, rgba(12, 31, 25, .14)), linear-gradient(0deg, rgba(10, 28, 23, .5), transparent 70%); }
   .scripture-progress { grid-template-columns: 5.2rem minmax(50px, 1fr) 4.3rem; gap: .55rem; font-size: .64rem; }
   .scripture-reading-note { align-items: flex-start; }
