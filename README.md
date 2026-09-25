@@ -51,6 +51,7 @@
 
 | 日期 | 文章 |
 | --- | --- |
+| 2026.09.25 | [如果佛陀看见π](https://lumisum.github.io/wulai/articles/insights/2026-09-25-ruguo-fotuo-kanjian-pi/) |
 | 2026.09.24 | [马斯克的佛性是什么？](https://lumisum.github.io/wulai/articles/insights/2026-09-24-musk-de-yuanli/) |
 | 2026.09.24 | [如来何以成佛祖？](https://lumisum.github.io/wulai/articles/insights/2026-09-24-rulai-heyi-cheng-fozu/) |
 | 2026.09.24 | [有了佛学基础，情商会不会提高？](https://lumisum.github.io/wulai/articles/life/2026-09-24-fuxue-yu-qingshang/) |
