@@ -166,7 +166,7 @@ def render_divider() -> str:
     return (
         '<p style="margin:14px auto 24px;text-align:center;line-height:0;">'
         f'<img src="{html.escape(DIVIDER_URL, quote=True)}" alt="" '
-        'style="display:block;width:240px;max-width:75%;height:auto;margin:0 auto;">'
+        'style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;">'
         "</p>"
     )
 
