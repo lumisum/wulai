@@ -51,6 +51,7 @@
 
 | 日期 | 文章 |
 | --- | --- |
+| 2026.09.26 | [佛陀如何教育自己的儿子？](https://lumisum.github.io/wulai/articles/insights/2026-09-26-fotuo-jiaoyu-luohouluo/) |
 | 2026.09.25 | [如果佛陀看见π](https://lumisum.github.io/wulai/articles/insights/2026-09-25-ruguo-fotuo-kanjian-pi/) |
 | 2026.09.24 | [马斯克的佛性是什么？](https://lumisum.github.io/wulai/articles/insights/2026-09-24-musk-de-yuanli/) |
 | 2026.09.24 | [如来何以成佛祖？](https://lumisum.github.io/wulai/articles/insights/2026-09-24-rulai-heyi-cheng-fozu/) |
