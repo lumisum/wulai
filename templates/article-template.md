@@ -32,3 +32,7 @@ status: draft
 - 作者 / 来源署名（如需）：
 - 关键词：
 - 原文链接（发布后填写）：
+
+## 公众号导入稿
+
+文章定稿并标记为 `published` 后，运行 `python3 scripts/export_wechat.py`，在本篇文章目录生成 `wechat.md`（内联 HTML 的 Markdown 正文）和 `wechat.html`（可预览、可复制版本）。排版遵循 [`guides/wechat-formatting.md`](../guides/wechat-formatting.md)，正文标题、摘要和封面在公众号后台单独填写。
