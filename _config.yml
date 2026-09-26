@@ -10,8 +10,8 @@ permalink: pretty
 exclude:
   - .agents
   - articles/README.md
-  - articles/*-wechat.md
-  - articles/*-wechat.html
+  - articles/**/wechat.md
+  - articles/**/wechat.html
   - guides
   - scripts
   - templates

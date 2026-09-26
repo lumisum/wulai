@@ -5,7 +5,7 @@ date: "YYYY-MM-DDTHH:MM:SS+08:00" # 使用发布时间，精确到秒以稳定�
 summary: "公众号摘要"
 status: draft
 permalink: /articles/YYYY-MM-DD-short-title/
-cover: /articles/YYYY-MM-DD-short-title-cover.png
+cover: /articles/YYYY-MM-DD-short-title/images/cover.png
 cover_alt: "封面画面说明"
 ---
 
@@ -23,11 +23,11 @@ cover_alt: "封面画面说明"
 
 ## 配图安排
 
-- 封面：`articles/YYYY-MM-DD-short-title-cover.png`（2.35:1 横版）
-- 正文图 1：`articles/YYYY-MM-DD-short-title-01.png`（3:4 竖版；建议放在……）
-- 正文图 2：`articles/YYYY-MM-DD-short-title-02.png`（3:4 竖版；建议放在……）
-- 正文图 3：`articles/YYYY-MM-DD-short-title-03.png`（3:4 竖版；按需使用，建议放在……）
-- 在正文中用公开地址插图，例如：`![图片说明](https://lumisum.github.io/wulai/articles/YYYY-MM-DD-short-title-01.png)`
+- 封面：`images/cover.png`（2.35:1 横版）
+- 正文图 1：`images/01.png`（3:4 竖版；建议放在……）
+- 正文图 2：`images/02.png`（3:4 竖版；建议放在……）
+- 正文图 3：`images/03.png`（3:4 竖版；按需使用，建议放在……）
+- 在正文中用公开地址插图，例如：`![图片说明](https://lumisum.github.io/wulai/articles/YYYY-MM-DD-short-title/images/01.png)`
 
 ## 发布信息
 
@@ -38,4 +38,4 @@ cover_alt: "封面画面说明"
 
 ## 公众号导入稿
 
-将本文保存为 `articles/YYYY-MM-DD-short-title.md`，配图使用同一短名并直接放在 `articles/` 根目录。文章定稿并标记为 `published` 后，运行 `python3 scripts/export_wechat.py`，会在 `articles/` 根目录生成 `YYYY-MM-DD-short-title-wechat.md`（内联 HTML 的 Markdown 正文）、`YYYY-MM-DD-short-title-wechat.html`（可预览、可复制版本），并按时间更新 `articles/README.md`。排版遵循 [`guides/wechat-formatting.md`](../guides/wechat-formatting.md)，正文标题、摘要和封面在公众号后台单独填写。
+将本文保存为 `articles/YYYY-MM-DD-short-title/article.md`，并把配图放在同目录的 `images/` 下。文章定稿并标记为 `published` 后，运行 `python3 scripts/export_wechat.py`，会在本篇目录生成 `wechat.md`（内联 HTML 的公众号稿）和 `wechat.html`（可预览、可复制版本），并按时间更新 `articles/README.md`。HTML 稿的开头包含 2.35:1 封面，排版遵循 [`guides/wechat-formatting.md`](../guides/wechat-formatting.md)。

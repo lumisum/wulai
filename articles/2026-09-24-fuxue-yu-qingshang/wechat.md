@@ -1,0 +1,37 @@
+<!--
+无来微信公众号图文排版稿。封面已置于正文开头；公众号标题和摘要字段可另行填写。
+标题：有了佛学基础，情商会不会提高？
+摘要：佛学未必直接教人说话的技巧，却可能慢慢改变情绪生起时的心。无住、慈悲与对我执的觉察，会不会让我们在人际关系里多一点安定与理解？
+正文图片和装饰图为网站公开链接；粘贴后请检查图片，必要时在公众号后台重新上传。
+-->
+
+<p style="margin:0 0 24px;line-height:0;"><img src="https://lumisum.github.io/wulai/articles/2026-09-24-fuxue-yu-qingshang/images/cover.png" alt="有了佛学基础，情商会不会提高？" style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;"></p>
+<div style="padding:0 24px 8px;">
+<p style="margin:2px 0 12px;color:#8C724C;font-size:12px;line-height:1.5;letter-spacing:2px;text-align:center;">无来 · 修学随笔</p>
+<p style="margin:0 auto 12px;color:#18372F;font-size:24px;font-weight:700;line-height:1.5;text-align:center;letter-spacing:0.4px;">有了佛学基础，情商会不会提高？</p>
+<p style="margin:0 auto 8px;color:#68736A;font-size:14px;line-height:1.8;text-align:center;">佛学未必直接教人说话的技巧，却可能慢慢改变情绪生起时的心。无住、慈悲与对我执的觉察，会不会让我们在人际关系里多一点安定与理解？</p>
+<p style="margin:14px auto 24px;text-align:center;line-height:0;"><img src="https://lumisum.github.io/wulai/assets/wulai-wechat-divider.png" alt="" style="display:block;width:240px;max-width:75%;height:auto;margin:0 auto;"></p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">我最近一直在想一个问题：如果一个人真正有了一定的佛学基础，他的情商会不会也跟着提高？</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">这里说的“情商提高”，不是变得更会说话，更懂得察言观色，或者更擅长讨好别人。我感兴趣的是另一种变化：一个人会不会渐渐不那么容易被一句话激怒，不急着证明自己，也更愿意理解别人的情绪和处境？如果是这样，佛法和现实生活之间，就有了一条很直接的联系。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">我们今天谈情商，常会谈到一些技巧：说话留有余地，遇到冲突别马上反击，先听对方说完，试着站在对方的角度想一想。这些当然都有用。可问题在于，大多数人并不是不知道这些道理，而是在事情真正发生时，很难做到。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">别人当众否定你，明明是他的责任，却把问题推到你身上；你辛辛苦苦做成一件事，对方却用一句话把它抹掉。这个时候，谁不知道“要冷静”？可心里先冒出来的往往是：“凭什么？”“我要说清楚，不能让别人以为是我的错。”</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">所以我越来越觉得，<strong style="color:#315B49;background-color:#EFF2EA;font-weight:700;padding:1px 3px;">情商最难的地方也许不在技巧，而在心。</strong>别人一句话为什么能把我们点燃？很多时候，不是那句话本身有多严重，而是它碰到了“我”：我的面子、判断、利益、位置，还有我对自己的评价。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">再回头看佛家说的“无住”，会发现它并不玄。别人一句话已经说完了，一个小时后我们还在想；事情过去一天了，晚上躺在床上仍然回放当时的场景，甚至懊恼“我那时要是这样回答就好了”。人已经走了，话也散了，事情也过去了，只有心还停在那里。这或许就是一种“住”。</p>
+<p style="margin:26px 0;"><img src="https://lumisum.github.io/wulai/articles/2026-09-24-fuxue-yu-qingshang/images/01.png" alt="争执已经过去，心却还停在那句话上" style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;"></p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">无住并不是没有情绪，也不是逼自己把情绪压下去，而是情绪来了以后，不一定要一直抓着它。我们可以知道自己正在生气、委屈或难过，也可以先不急着让这些感受替自己做决定。这样一来，它就和情绪稳定连上了。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">所谓情绪稳定，也许并不是一个人特别会忍，而是有些东西不再那么容易长久地停在心里。别人夸我，我知道；别人批评我，我也知道。但这些评价不必立刻变成“我全部的价值”。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">再往下，是慈悲。我们常说高情商需要共情，但共情最难的时候，不是别人对你好的时候，而是别人正在伤害你的时候。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">一个人为什么特别强势，为什么总想控制别人，为什么习惯贬低别人或推卸责任？这些行为可能确实让人难受，也不因为“理解”就变得正确。但如果愿意多看一层，有时会发现别的缘由：有人强势，是害怕失控；有人反复炫耀，是太需要确认自己的价值；有人总在攻击别人，也许长期被焦虑和不安裹挟着。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;"><strong style="color:#315B49;background-color:#EFF2EA;font-weight:700;padding:1px 3px;">慈悲不是替别人找借口，更不是取消边界，而是在行为之外，再多看见一点。</strong>看见这一层以后，心里或许会从“他怎么能这样对我”，慢慢多出一个问题：“他为什么会这样？”这一点松动，已经很接近我理解的高情商了。</p>
+<p style="margin:26px 0;"><img src="https://lumisum.github.io/wulai/articles/2026-09-24-fuxue-yu-qingshang/images/02.png" alt="在一段紧张的谈话里，仍然看见彼此的处境与边界" style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;"></p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">人与人之间的冲突，很多时候不再是在解决事情，而是在传递情绪。一个人在公司受了气，回家对孩子发火；被领导否定，转身对下属失去耐心；夫妻因为一句小事争起来，到最后甚至忘了最初在争什么。每个人都觉得自己是在反击，结果只是把自己的痛苦递给了下一个人。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">所以我现在觉得，比较成熟的情商里，或许还有一种能力：<strong style="color:#315B49;background-color:#EFF2EA;font-weight:700;padding:1px 3px;">不让自己成为情绪传递链条里的中转站。</strong>别人把焦虑带给我，我可以感受到，但不一定再把它扔给别人；别人伤害了我，我当然可以保护自己，却不必为了让对方也痛一次，再伤害回去。</p>
+<p style="margin:26px 0;"><img src="https://lumisum.github.io/wulai/articles/2026-09-24-fuxue-yu-qingshang/images/03.png" alt="在回家之前停一停，让白天的情绪不再传给身边的人" style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;"></p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">如果这一切只靠“忍”，很难长久，因为忍本身也是消耗。真正的稳定，也许是心里有些东西慢慢变了：有些输赢不再那么重要，有些评价不再轻易闯进来，有些话听见以后，确实可以过去。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">这时就会碰到佛家常说的“我执”。“我”越重，事情就越容易变成冲突：别人不同意我的观点，好像就是否定我；别人比我好，好像就证明我不够好；别人没有照着我的期待行动，好像就是在冒犯我。很多时候，我们不是在处理眼前的事情，而是在保护一个总想被证明的“我”。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">情商训练会告诉我们：“这时候不要反驳。”佛法还会继续追问：“我为什么这么急着反驳？”情商会提醒我们：“不要太在意别人怎么看你。”佛法也许会接着问：“那个如此害怕别人评价的‘我’，究竟在抓住什么？”一个在告诉我们可以怎么做，一个继续带我们看看，为什么自己总是做不到。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">所以我现在越来越觉得，佛学未必会直接教一个人提高情商，却可能改变情商背后的心。无住，让人不那么容易被一句话困住；慈悲，让人不只从自己的位置看别人；般若提醒我，第一反应未必就是事情的全部；对我执的觉察，则让那些非争不可、非赢不可、非要证明自己的念头，慢慢松一些。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">这些变化落到生活里，别人看到的也许只是：“这个人情商挺高。”但真正发生改变的，可能不是说话技巧，而是他的心。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;">有了佛学基础，情商会不会自动提高？我想，未必会自动。但如果一个人愿意把学到的智慧慢慢带进生活，让它在一次次相处和选择里落地，那么情商很可能只是自然长出来的结果。</p>
+<p style="margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;letter-spacing:0.25px;"><strong style="color:#315B49;background-color:#EFF2EA;font-weight:700;padding:1px 3px;">情商发生在人与人之间；而它的根，也许一直长在自己的心里。</strong></p>
+<p style="margin:14px auto 24px;text-align:center;line-height:0;"><img src="https://lumisum.github.io/wulai/assets/wulai-wechat-divider.png" alt="" style="display:block;width:240px;max-width:75%;height:auto;margin:0 auto;"></p><p style="margin:0 0 8px;color:#365344;font-size:14px;line-height:1.8;text-align:center;">愿把所思所学，带回眼前的生活。</p><p style="margin:0;color:#AB8966;font-size:12px;letter-spacing:2px;text-align:center;">无来 · 修学随笔</p></div>

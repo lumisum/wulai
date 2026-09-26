@@ -13,20 +13,20 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE_BASE = "https://lumisum.github.io/wulai/"
 
 PARAGRAPH_STYLE = (
-    "margin:0 0 20px;color:#354039;font-size:16px;line-height:1.9;"
+    "margin:0 0 20px;color:#354039;font-size:15px;line-height:1.95;"
     "letter-spacing:0.25px;"
 )
 HEADING_STYLE = (
-    "margin:30px 0 16px;padding-left:12px;border-left:3px solid #7E9184;"
-    "color:#18372F;font-size:19px;font-weight:700;line-height:1.55;"
+    "margin:34px 0 18px;padding-left:12px;border-left:3px solid #AB8966;"
+    "color:#18372F;font-size:18px;font-weight:700;line-height:1.65;"
 )
 SUBHEADING_STYLE = (
-    "margin:24px 0 12px;color:#365344;font-size:17px;font-weight:700;"
+    "margin:26px 0 14px;color:#365344;font-size:16px;font-weight:700;"
     "line-height:1.6;"
 )
 QUOTE_STYLE = (
-    "margin:22px 0;padding:12px 16px;border-left:3px solid #7E9184;"
-    "background-color:#F1F3EE;color:#365344;font-size:16px;line-height:1.85;"
+    "margin:24px 0;padding:15px 17px;border-left:3px solid #AB8966;"
+    "background-color:#F5F5EF;color:#365344;font-size:15px;line-height:1.9;"
 )
 STRONG_STYLE = "color:#315B49;font-weight:700;"
 HIGHLIGHT_STYLE = (
@@ -35,9 +35,18 @@ HIGHLIGHT_STYLE = (
 LINK_STYLE = "color:#315B49;text-decoration:underline;"
 IMAGE_STYLE = "display:block;width:100%;max-width:100%;height:auto;margin:0 auto;"
 KICKER_STYLE = (
-    "margin:4px 0 28px;color:#8C724C;font-size:12px;line-height:1.5;"
+    "margin:2px 0 12px;color:#8C724C;font-size:12px;line-height:1.5;"
     "letter-spacing:2px;text-align:center;"
 )
+TITLE_STYLE = (
+    "margin:0 auto 12px;color:#18372F;font-size:24px;font-weight:700;"
+    "line-height:1.5;text-align:center;letter-spacing:0.4px;"
+)
+SUMMARY_STYLE = (
+    "margin:0 auto 8px;color:#68736A;font-size:14px;line-height:1.8;"
+    "text-align:center;"
+)
+DIVIDER_URL = urljoin(SITE_BASE, "assets/wulai-wechat-divider.png")
 
 HIGHLIGHTS = {
     "2026-09-24-fuxue-yu-qingshang": [
@@ -153,8 +162,44 @@ def render_image(block: str, image_base_url: str) -> str | None:
     )
 
 
+def render_divider() -> str:
+    return (
+        '<p style="margin:14px auto 24px;text-align:center;line-height:0;">'
+        f'<img src="{html.escape(DIVIDER_URL, quote=True)}" alt="" '
+        'style="display:block;width:240px;max-width:75%;height:auto;margin:0 auto;">'
+        "</p>"
+    )
+
+
+def render_article_header(title: str, summary: str, cover: str) -> str:
+    cover_url = urljoin(SITE_BASE, cover.lstrip("/"))
+    blocks = [
+        '<p style="margin:0 0 24px;line-height:0;">'
+        f'<img src="{html.escape(cover_url, quote=True)}" alt="{html.escape(title, quote=True)}" '
+        'style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;">'
+        "</p>",
+        '<div style="padding:0 24px 8px;">',
+        f'<p style="{KICKER_STYLE}">无来 · 修学随笔</p>',
+        f'<p style="{TITLE_STYLE}">{html.escape(title, quote=False)}</p>',
+    ]
+    if summary:
+        blocks.append(f'<p style="{SUMMARY_STYLE}">{html.escape(summary, quote=False)}</p>')
+    blocks.append(render_divider())
+    return "\n".join(blocks)
+
+
+def render_article_end() -> str:
+    return (
+        render_divider()
+        + '<p style="margin:0 0 8px;color:#365344;font-size:14px;line-height:1.8;'
+        'text-align:center;">愿把所思所学，带回眼前的生活。</p>'
+        '<p style="margin:0;color:#AB8966;font-size:12px;letter-spacing:2px;'
+        'text-align:center;">无来 · 修学随笔</p></div>'
+    )
+
+
 def render_body(markdown: str, image_base_url: str, highlights: list[str]) -> str:
-    blocks: list[str] = [f'<p style="{KICKER_STYLE}">无来 · 修学随笔</p>']
+    blocks: list[str] = []
     for raw_block in re.split(r"\n\s*\n", markdown.strip()):
         block = raw_block.strip()
         if not block:
@@ -170,7 +215,10 @@ def render_body(markdown: str, image_base_url: str, highlights: list[str]) -> st
             if label in {"正文", "结尾"}:
                 continue
             style = HEADING_STYLE if len(heading.group(1)) == 1 or len(heading.group(1)) == 2 else SUBHEADING_STYLE
-            blocks.append(f'<p style="{style}">{render_inline(label)}</p>')
+            blocks.append(
+                f'<p style="{style}"><span style="color:#AB8966;font-size:12px;">◦</span> '
+                f'{render_inline(label)}</p>'
+            )
             continue
 
         if block.startswith("- ") or block.startswith("* "):
@@ -205,14 +253,13 @@ def render_body(markdown: str, image_base_url: str, highlights: list[str]) -> st
     return "\n".join(blocks)
 
 
-def make_markdown_export(title: str, summary: str, cover: str, markup: str) -> str:
+def make_markdown_export(title: str, summary: str, markup: str) -> str:
     return (
         "<!--\n"
-        "无来微信公众号正文排版稿。标题、摘要、封面请在公众号对应字段单独填写。\n"
+        "无来微信公众号图文排版稿。封面已置于正文开头；公众号标题和摘要字段可另行填写。\n"
         f"标题：{title}\n"
         f"摘要：{summary}\n"
-        f"封面：{cover}\n"
-        "正文图片为网站公开链接；粘贴后请检查图片，必要时在公众号后台重新上传。\n"
+        "正文图片和装饰图为网站公开链接；粘贴后请检查图片，必要时在公众号后台重新上传。\n"
         "-->\n\n"
         f"{markup}\n"
     )
@@ -228,8 +275,8 @@ def make_html_export(title: str, markup: str) -> str:
             '  <meta name="viewport" content="width=device-width, initial-scale=1">',
             f"  <title>{html.escape(title)}</title>",
             "</head>",
-            '<body style="margin:0;background-color:#FBFAF6;">',
-            '  <div style="max-width:677px;margin:0 auto;padding:24px 20px 36px;background-color:#FFFFFF;">',
+            '<body style="margin:0;background-color:#F4F4EE;">',
+            '  <div style="max-width:677px;margin:0 auto;padding:0 0 36px;background-color:#FFFFFF;">',
             f"{markup}",
             "  </div>",
             "</body>",
@@ -245,12 +292,13 @@ def write_article_index(article_paths: list[Path]) -> None:
         metadata, _ = parse_frontmatter(article_path.read_text(encoding="utf-8"))
         if metadata.get("status") != "published":
             continue
-        records.append((metadata.get("date", ""), metadata.get("title", article_path.stem), article_path.stem))
+        slug = article_path.parent.name
+        records.append((metadata.get("date", ""), metadata.get("title", slug), slug))
     records.sort(reverse=True)
     rows = [
         "# 文章与公众号导入稿",
         "",
-        "按发布时间排列。进入文章目录即可找到原文、配图和可复制的 HTML 稿。",
+        "按发布时间排列。每篇文章各有一个目录，内含原文、配图和可复制的 HTML 稿。",
         "",
         "| 日期 | 文章 | 原文 Markdown | 公众号 HTML | 排版 Markdown |",
         "| --- | --- | --- | --- | --- |",
@@ -259,9 +307,9 @@ def write_article_index(article_paths: list[Path]) -> None:
         day = date[:10] if date else "—"
         safe_title = title.replace("|", "\\|")
         rows.append(
-            f"| {day} | {safe_title} | [{slug}.md]({slug}.md) "
-            f"| [{slug}-wechat.html]({slug}-wechat.html) "
-            f"| [{slug}-wechat.md]({slug}-wechat.md) |"
+            f"| {day} | {safe_title} | [{slug}/article.md]({slug}/article.md) "
+            f"| [{slug}/wechat.html]({slug}/wechat.html) "
+            f"| [{slug}/wechat.md]({slug}/wechat.md) |"
         )
     (ROOT / "articles" / "README.md").write_text("\n".join(rows) + "\n", encoding="utf-8")
 
@@ -273,24 +321,27 @@ def export_article(source_path: Path) -> bool:
     title = metadata.get("title", "无来修学随笔")
     summary = metadata.get("summary", "")
     cover = metadata.get("cover", "")
-    highlights = HIGHLIGHTS.get(source_path.stem, [])
-    image_base_url = urljoin(SITE_BASE, "articles/")
-    markup = render_body(body, image_base_url, highlights)
-    (source_path.parent / f"{source_path.stem}-wechat.md").write_text(
-        make_markdown_export(title, summary, cover, markup), encoding="utf-8"
+    highlights = HIGHLIGHTS.get(source_path.parent.name, [])
+    relative_article_dir = source_path.parent.relative_to(ROOT).as_posix()
+    image_base_url = urljoin(SITE_BASE, f"{relative_article_dir}/images/")
+    markup = "\n".join(
+        part for part in [
+            render_article_header(title, summary, cover),
+            render_body(body, image_base_url, highlights),
+            render_article_end(),
+        ] if part
     )
-    (source_path.parent / f"{source_path.stem}-wechat.html").write_text(
+    (source_path.parent / "wechat.md").write_text(
+        make_markdown_export(title, summary, markup), encoding="utf-8"
+    )
+    (source_path.parent / "wechat.html").write_text(
         make_html_export(title, markup), encoding="utf-8"
     )
     return True
 
 
 def main() -> None:
-    articles = sorted(
-        article
-        for article in (ROOT / "articles").glob("*.md")
-        if not article.stem.endswith("-wechat") and article.name != "README.md"
-    )
+    articles = sorted((ROOT / "articles").glob("*/article.md"))
     exported = sum(export_article(article) for article in articles)
     write_article_index(articles)
     print(f"Generated WeChat imports for {exported} published articles.")
