@@ -1,11 +1,73 @@
 <!doctype html>
 <html lang="{{ site.lang | default: 'zh-CN' }}">
   <head>
+    {% assign canonical_url = page.url | absolute_url %}
+    {% assign seo_description = page.description | default: page.summary | default: site.description | strip_html | normalize_whitespace | truncate: 160 %}
+    {% assign social_image = page.cover | default: site.social_image | absolute_url %}
+    {% assign social_image_alt = page.cover_alt | default: site.social_image_alt | default: page.title | default: site.title %}
+    {% capture seo_title %}{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}{% endcapture %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <meta name="description" content="{{ seo_description | escape }}">
+    <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#18372f">
-    <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    <title>{{ seo_title | strip | escape }}</title>
+    <link rel="canonical" href="{{ canonical_url | escape }}">
+    <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | absolute_url }}">
+
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta property="og:type" content="{% if page.layout == 'article' %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{{ seo_title | strip | escape }}">
+    <meta property="og:description" content="{{ seo_description | escape }}">
+    <meta property="og:url" content="{{ canonical_url | escape }}">
+    <meta property="og:image" content="{{ social_image | escape }}">
+    <meta property="og:image:alt" content="{{ social_image_alt | escape }}">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="819">
+    {% if page.layout == 'article' and page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ seo_title | strip | escape }}">
+    <meta name="twitter:description" content="{{ seo_description | escape }}">
+    <meta name="twitter:image" content="{{ social_image | escape }}">
+    <meta name="twitter:image:alt" content="{{ social_image_alt | escape }}">
+
+    {% if page.layout == 'article' %}
+      {% capture structured_data %}{
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ page.title | jsonify }},
+        "description": {{ seo_description | jsonify }},
+        "image": [{{ social_image | jsonify }}],
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+        "author": {"@type": "Person", "name": {{ site.title | jsonify }}},
+        "publisher": {"@type": "Organization", "name": {{ site.title | jsonify }}},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": {{ canonical_url | jsonify }}}
+      }{% endcapture %}
+      <script type="application/ld+json">{{ structured_data | strip }}</script>
+    {% elsif page.url == '/' %}
+      {% capture structured_data %}{
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": {{ site.title | jsonify }},
+        "url": {{ canonical_url | jsonify }},
+        "description": {{ seo_description | jsonify }},
+        "inLanguage": {{ site.lang | jsonify }}
+      }{% endcapture %}
+      <script type="application/ld+json">{{ structured_data | strip }}</script>
+    {% else %}
+      {% capture structured_data %}{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": {{ page.title | default: site.title | jsonify }},
+        "url": {{ canonical_url | jsonify }},
+        "description": {{ seo_description | jsonify }},
+        "isPartOf": {"@type": "WebSite", "name": {{ site.title | jsonify }}, "url": {{ '/' | absolute_url | jsonify }}},
+        "inLanguage": {{ site.lang | jsonify }}
+      }{% endcapture %}
+      <script type="application/ld+json">{{ structured_data | strip }}</script>
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   </head>
   <body>

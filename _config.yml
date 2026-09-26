@@ -3,6 +3,8 @@ description: 在日常里修行，在体会中写下佛法。
 lang: zh-CN
 url: https://lumisum.github.io
 baseurl: /wulai
+social_image: /assets/wulai-readme-hero.png
+social_image_alt: 青松绿山水间的晨光与静水，无来佛法修学记录
 markdown: kramdown
 permalink: pretty
 exclude:

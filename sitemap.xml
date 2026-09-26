@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for item in site.pages %}
+    {% assign is_home = false %}
+    {% assign is_classic = false %}
+    {% assign is_published_article = false %}
+    {% if item.url == '/' %}{% assign is_home = true %}{% endif %}
+    {% if item.url contains '/classics/' and item.layout == 'default' %}{% assign is_classic = true %}{% endif %}
+    {% if item.layout == 'article' and item.status == 'published' %}{% assign is_published_article = true %}{% endif %}
+    {% if is_home or is_classic or is_published_article %}
+  <url>
+    <loc>{{ item.url | absolute_url | xml_escape }}</loc>
+  </url>
+    {% endif %}
+  {% endfor %}
+</urlset>
