@@ -139,12 +139,12 @@ def render_inline(text: str) -> str:
     return "".join(parts)
 
 
-def render_image(block: str, permalink: str) -> str | None:
+def render_image(block: str, image_base_url: str) -> str | None:
     match = IMAGE_RE.fullmatch(block.strip())
     if not match:
         return None
     alt, source = match.groups()
-    image_url = urljoin(urljoin(SITE_BASE, permalink.lstrip("/")), source)
+    image_url = urljoin(image_base_url, source)
     return (
         f'<p style="margin:26px 0;">'
         f'<img src="{html.escape(image_url, quote=True)}" '
@@ -153,13 +153,13 @@ def render_image(block: str, permalink: str) -> str | None:
     )
 
 
-def render_body(markdown: str, permalink: str, highlights: list[str]) -> str:
+def render_body(markdown: str, image_base_url: str, highlights: list[str]) -> str:
     blocks: list[str] = [f'<p style="{KICKER_STYLE}">无来 · 修学随笔</p>']
     for raw_block in re.split(r"\n\s*\n", markdown.strip()):
         block = raw_block.strip()
         if not block:
             continue
-        image = render_image(block, permalink)
+        image = render_image(block, image_base_url)
         if image:
             blocks.append(image)
             continue
@@ -239,28 +239,60 @@ def make_html_export(title: str, markup: str) -> str:
     )
 
 
+def write_article_index(article_paths: list[Path]) -> None:
+    records = []
+    for article_path in article_paths:
+        metadata, _ = parse_frontmatter(article_path.read_text(encoding="utf-8"))
+        if metadata.get("status") != "published":
+            continue
+        records.append((metadata.get("date", ""), metadata.get("title", article_path.stem), article_path.stem))
+    records.sort(reverse=True)
+    rows = [
+        "# 文章与公众号导入稿",
+        "",
+        "按发布时间排列。进入文章目录即可找到原文、配图和可复制的 HTML 稿。",
+        "",
+        "| 日期 | 文章 | 原文 Markdown | 公众号 HTML | 排版 Markdown |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for date, title, slug in records:
+        day = date[:10] if date else "—"
+        safe_title = title.replace("|", "\\|")
+        rows.append(
+            f"| {day} | {safe_title} | [{slug}.md]({slug}.md) "
+            f"| [{slug}-wechat.html]({slug}-wechat.html) "
+            f"| [{slug}-wechat.md]({slug}-wechat.md) |"
+        )
+    (ROOT / "articles" / "README.md").write_text("\n".join(rows) + "\n", encoding="utf-8")
+
+
 def export_article(source_path: Path) -> bool:
     metadata, body = parse_frontmatter(source_path.read_text(encoding="utf-8"))
     if metadata.get("status") != "published":
         return False
     title = metadata.get("title", "无来修学随笔")
     summary = metadata.get("summary", "")
-    permalink = metadata.get("permalink", "/")
     cover = metadata.get("cover", "")
-    highlights = HIGHLIGHTS.get(source_path.parent.name, [])
-    markup = render_body(body, permalink, highlights)
-    (source_path.parent / "wechat.md").write_text(
+    highlights = HIGHLIGHTS.get(source_path.stem, [])
+    image_base_url = urljoin(SITE_BASE, "articles/")
+    markup = render_body(body, image_base_url, highlights)
+    (source_path.parent / f"{source_path.stem}-wechat.md").write_text(
         make_markdown_export(title, summary, cover, markup), encoding="utf-8"
     )
-    (source_path.parent / "wechat.html").write_text(
+    (source_path.parent / f"{source_path.stem}-wechat.html").write_text(
         make_html_export(title, markup), encoding="utf-8"
     )
     return True
 
 
 def main() -> None:
-    articles = sorted((ROOT / "articles").rglob("article.md"))
+    articles = sorted(
+        article
+        for article in (ROOT / "articles").glob("*.md")
+        if not article.stem.endswith("-wechat") and article.name != "README.md"
+    )
     exported = sum(export_article(article) for article in articles)
+    write_article_index(articles)
     print(f"Generated WeChat imports for {exported} published articles.")
 
 
